@@ -1,0 +1,24 @@
+-hdfs_monitor_interval=30000
+-call_hdfs_metadata_flag=false
+# -call_hdfs_metadata_url=http://laser.biz.weibo.com/checksum
+-laser_hdfs_data_dir=/dw_ext/ad/ads_core/laser/online
+-vmodule='hdfsmonitor=0,partition_handler=0,replication_db=0'
+-replicator_max_updates_per_response=500
+-wdt_global_receiver_limit=5
+-loader_thread_nums=1
+-wdt_replicator_abort_timeout_ms=14400000
+-wdt_overwrite=true
+-wdt_ipv4=true
+-wdt_encryption_type=none
+-wdt_accept_timeout_millis=30000
+-wdt_accept_window_millis=20000
+-wdt_connect_timeout_millis=10000
+-idle_timeout=86400000
+-http_server_work_thread_num=16
+-wdt_max_mbytes_per_sec=200
+-replication_reverse_mode_enable=false
+-max_background_flushes=2
+-max_background_compactions=2
+-delay_set_available_seconds=1
+-periodic_compaction_seconds=1296000
+-hdfs_monitor_sync_thread_nums=4

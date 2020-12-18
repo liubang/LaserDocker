@@ -1,0 +1,106 @@
+debug: false
+http:
+  port: 31000
+  host: 0.0.0.0
+static:
+  root: /laser/control/
+database:
+  driver: mysql
+  dsn: root:root@tcp(mysql:3306)/laser?charset=utf8&parseTime=True&loc=Local
+logger:
+  level: debug
+  fileName: /laser/control/logs/service.log
+  maxSize: 1024
+  maxBackups: 3
+  maxAge: 7
+  compress: true
+auth:
+  sessionSaveSeconds: 86400
+consul:
+  address: consul:8500
+  token:
+cluster:
+  config: /laser/control/etc/cluster_node.yml
+  serviceName: laser_test
+  proxyServiceName: laser_test_proxy
+project:
+  projectName: laser_test
+laserClient:
+  timeoutMs: 10000
+batchUpdateManager:
+  url: http://10.41.23.175:8080
+ansible:
+  sshPort: 30022
+  playbookDir: /laser/control/ansible
+  tmpHostFile: hosts
+  tmpPlaybookFile: playbook.yml
+email:
+  emailUser:
+  emailPassword:
+  emailSnmpAddress:
+  emailFrom:
+report:
+  cronExpressionPeak: "* * 23 * * *"
+  cronExpressionPeacePeak: "* * 12 * * * *"
+prometheus:
+  serverPrometheusAddress: prometheus:9099
+  clientPrometheusAddress: prometheus:9090
+commonUrls:
+  - /database/list
+  - /keycheck/list
+  - /version_change/show
+  - /table/list
+  - /table/list_commands
+  - /ticket/store
+  - /ticket/list
+  - /ticket/update
+  - /user/info
+  - /config_validator/unsynchronized_config
+adminUsers:
+  - zhongxiu
+  - liubang
+  - mingrui5
+  - deyun
+  - koupeng
+laserCommands:
+  singleOperations:
+    - get
+    - set
+    - expire
+    - expireAt
+    - ttl
+    - append
+    - setx
+    - exist
+    - hget
+    - hgetall
+    - hexists
+    - hkeys
+    - hlen
+    - hmget
+    - hset
+    - hmset
+    - hdel
+    - decr
+    - incr
+    - decrBy
+    - incrBy
+    - lindex
+    - llen
+    - lpop
+    - lpush
+    - lrange
+    - rpop
+    - rpush
+    - sadd
+    - sismember
+    - sremove
+    - smembers
+    - zadd
+    - zrangeByScore
+    - zremRangeByScore
+  multipleOperations:
+    - mset
+    - mget
+    - msetDetail
+    - mgetDetail

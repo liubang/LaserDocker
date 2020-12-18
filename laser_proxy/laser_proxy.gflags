@@ -1,0 +1,7 @@
+-redis_key_delimiter_first=35
+-redis_key_delimiter_second=36
+-laser_client_read_mode=follower_read
+-laser_proxy_diff_range=65536
+-laser_proxy_local_first=true
+-laser_client_read_timeout=2
+-laser_client_write_timeout=8
