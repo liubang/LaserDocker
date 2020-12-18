@@ -24,7 +24,7 @@ cluster:
   serviceName: test
   proxyServiceName: test_proxy
 project:
-  projectName: test
+  projectName: laser_control
 laserClient:
   timeoutMs: 10000
 batchUpdateManager:
