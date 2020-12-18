@@ -21,10 +21,10 @@ consul:
   token:
 cluster:
   config: /laser/control/etc/cluster_node.yml
-  serviceName: laser_test
-  proxyServiceName: laser_test_proxy
+  serviceName: test
+  proxyServiceName: test_proxy
 project:
-  projectName: laser_test
+  projectName: test
 laserClient:
   timeoutMs: 10000
 batchUpdateManager:
